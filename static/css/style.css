@@ -56,7 +56,7 @@ a:focus {
   background: var(--light) !important;
   border: none;
   border-radius: 0;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
 
@@ -371,5 +371,102 @@ button.btn {
   align-items: center;
 }
 /* ---------------------------------------------------
-  
+MANTENIMIENTO
 ----------------------------------------------------- */
+.wrapper {
+  height: 56rem;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(4, 1fr) ;
+  grid-template-rows: repeat(2, 1fr );
+  grid-auto-flow: column;
+
+  background-color: #fff;
+  color: #444;
+}
+
+.box {
+  /* background: aquamarine; */
+  color: var(--negro);
+  border-radius: 5px;
+  border: 1px solid #dee2e6;
+  padding: 2rem;
+}
+
+.servicios {
+  grid-column:  1 / 4;
+  grid-row: 1 / 2;
+
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+.title-services{
+  grid-column:  1 / 5;
+  grid-row:  1 / 2;
+}
+.inner-box{
+  background: grey; 
+}
+.servicios > div:nth-of-type(1){
+  background: crimson;
+  grid-column:  1 / 2;
+  grid-row:  2 / 4;
+}
+.servicios > div:nth-of-type(2){
+  grid-column:  2 / 3;
+  grid-row:  2 / 4;
+}
+.servicios > div:nth-of-type(3){
+  grid-column:  3 / 4;
+  grid-row:  2 / 4;
+}
+.servicios > div:nth-of-type(4){
+  grid-column:  4 / 5;
+  grid-row:  2 / 4;
+}
+.servicios > div:nth-of-type(5){
+  grid-column:  1 / 2;
+  grid-row:  4 / 5;
+}
+.servicios > div:nth-of-type(6){
+  grid-column:  2 / 3;
+  grid-row:  4 / 5;
+}
+.servicios > div:nth-of-type(7){
+  grid-column:  3 / 4;
+  grid-row:  4 / 5;
+}
+.servicios > div:nth-of-type(8){
+  grid-column:  4 / 5;
+  grid-row:  4 / 5;
+}
+
+.total-servicios {
+  grid-column: 4 / 5;
+  grid-row: 1 / 2;
+}
+.servicios-curso {
+  grid-column:  1 / 4;
+  grid-row: 2 / 3;
+}
+.personal{
+  grid-column: 4 / 5;
+  grid-row: 2 / 3;
+}
+
+/* .e {
+  grid-column: 1 / 3;
+  grid-row: 1;
+}
+
+.f {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.g {
+  grid-column: 2;
+  grid-row: 2;
+} */
