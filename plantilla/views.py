@@ -14,7 +14,7 @@ def index(request):
     
 def mantenimiento(request):
     return render(request, 'mantenimiento.html', {
-        'title': 'Mantenenimiento',
+        'title': 'Mantenimiento',
         'message': 'Listado de productos',
         'oficios' : [
             {'title':'Carpintería', 'subtitle': 'Limpieza'},
