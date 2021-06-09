@@ -1,4 +1,8 @@
 {% load static %}
+
+<!-- {% url 'index' as index %}
+{% url 'mantenimiento' as mantenimiento %} -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,6 +25,7 @@
 
     <!-- Ionic icons -->
     <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     
     <title>{{title}}</title>
 </head>
@@ -39,11 +44,11 @@
             </div>
 
             <ul class="list-unstyled components">
-                <li class="active">
+                <li class="{% if request.path == index %} active {% endif %}">
                     {# <a href="{% url 'condominios' %}" class="d-block p-1 text-light"><i class="icon mr-2 ion-md-home"></i> Home</a> #}
-                    <a href="{% url 'index' %}" class="d-block p-1 text-light"><i class="icon mr-2 ion-md-home"></i> Home</a>
+                    <a href="{{ index }}" class="d-block p-1 text-light"><i class="icon mr-2 ion-md-home"></i> Home</a>
                 </li>
-                <li><a href="{% url 'mantenimiento' %}" class="d-block p-1 text-light"><i class="icon mr-2 ion-md-cube"></i> Mantenimiento</a></li>
+                <li class="{% if request.path == mantenimiento %} active {% endif %}"><a href="{{ mantenimiento }}" class="d-block p-1 text-light"><i class="icon mr-2 ion-md-cube"></i> Mantenimiento</a></li>
                 <li><a href="#" class="d-block p-1 text-light"><i class="icon mr-2 ion-md-person"></i> Administración personal</a></li>
                 <li><a href="#" class="d-block p-1 text-light"><i class="icon mr-2 ion-md-calendar"></i> Contabilidad</a></li>
                 <li><a href="#" class="d-block p-1 text-light"><i class="icon mr-2 ion-md-text"></i> Avisos <span class="badge badge-light">5</span></a></li>
