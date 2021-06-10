@@ -1,0 +1,224 @@
+{% load static %}
+
+<!-- {% url 'index' as index %}
+{% url 'mantenimiento' as mantenimiento %} -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/sidebar.css' %}">
+    {# <link rel="stylesheet" href="{% static 'css/argon.css' %}"> #}
+
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
+        integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous">
+    </script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
+        integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous">
+    </script>
+
+    <!-- Ionic icons -->
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+    <title>{{title}}</title>
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+
+
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+
+            <div id="dismiss">
+                <i class="fas fa-arrow-left"></i>
+            </div>
+
+            <div class="sidebar-header">
+                <h3>Haus</h3>
+                <strong>Hs</strong>
+            </div>
+
+            <ul class="list-unstyled components">
+                <li class="{% if request.path == index %} active {% endif %}">
+                    {# <a href="{% url 'condominios' %}" class="d-block p-1 text-light"><i class="icon mr-2 ion-md-home"></i> Home</a> #}
+                    <a href="{{ index }}" class="d-block p-1 text-light"><i class="icon mr-2 ion-md-home"></i> Home</a>
+                </li>
+                <li class="{% if request.path == mantenimiento %} active {% endif %}"><a href="{{ mantenimiento }}"
+                        class="d-block p-1 text-light"><i class="icon mr-2 ion-md-cube"></i> Mantenimiento</a></li>
+                <li><a href="#" class="d-block p-1 text-light"><i class="icon mr-2 ion-md-person"></i> Administración
+                        personal</a></li>
+                <li><a href="#" class="d-block p-1 text-light"><i class="icon mr-2 ion-md-calendar"></i>
+                        Contabilidad</a></li>
+                <li><a href="#" class="d-block p-1 text-light"><i class="icon mr-2 ion-md-text"></i> Avisos <span
+                            class="badge badge-light">5</span></a></li>
+                <li><a href="#" class="d-block p-1 text-light"><i class="icon mr-2 ion-md-timer"></i> Administración
+                        Unidades</a></li>
+                <li><a href="#" class="d-block p-1 text-light"><i class="icon mr-2 ion-md-timer"></i> Administración
+                        Unidades</a></li>
+                <li><a href="#" class="d-block p-1 text-light"><i class="icon mr-2 ion-md-timer"></i> Administración
+                        Unidades</a></li>
+                <li><a href="#" class="d-block p-1 text-light"><i class="icon mr-2 ion-md-timer"></i> Administración
+                        Unidades</a></li>
+                <li><a href="#" class="d-block p-1 text-light"><i class="icon mr-2 ion-md-timer"></i> Administración
+                        Unidades</a></li>
+                <li><a href="#" class="d-block p-1 text-light"><i class="icon mr-2 ion-md-timer"></i> Administración
+                        Unidades</a></li>
+                <li><a href="#" class="d-block p-1 text-light"><i class="icon mr-2 ion-md-timer"></i> Administración
+                        Unidades</a></li>
+                <li><a href="#" class="d-block p-1 text-light"><i class="icon mr-2 ion-md-timer"></i> Administración
+                        Unidades</a></li>
+                <li><a href="#" class="d-block p-1 text-light"><i class="icon mr-2 ion-md-timer"></i> Administración
+                        Unidades</a></li>
+                <li><a href="#" class="d-block p-1 text-light"><i class="icon mr-2 ion-md-timer"></i> Administración
+                        Unidades</a></li>
+                <li><a href="#" class="d-block p-1 text-light"><i class="icon mr-2 ion-md-timer"></i> Administración
+                        Unidades</a></li>
+                <li><a href="#" class="d-block p-1 text-light"><i class="icon mr-2 ion-md-timer"></i> Administración
+                        Unidades</a></li>
+                <li><a href="#" class="d-block p-1 text-light"><i class="icon mr-2 ion-md-timer"></i> Administración
+                        Unidades</a></li>
+                <li><a href="#" class="d-block p-1 text-light"><i class="icon mr-2 ion-md-timer"></i> Administración
+                        Unidades</a></li>
+                <li><a href="#" class="d-block p-1 text-light"><i class="icon mr-2 ion-md-timer"></i> Administración
+                        Unidades</a></li>
+                <li><a href="#" class="d-block p-1 text-light"><i class="icon mr-2 ion-md-timer"></i> Administración
+                        Unidades</a></li>
+                <li><a href="#" class="d-block p-1 text-light"><i class="icon mr-2 ion-md-timer"></i> Administración
+                        Unidades</a></li>
+                <li><a href="#" class="d-block p-1 text-light"><i class="icon mr-2 ion-md-timer"></i> Administración
+                        Unidades</a></li>
+                <li><a href="#" class="d-block p-1 text-light"><i class="icon mr-2 ion-md-timer"></i> Administración
+                        Unidades</a></li>
+                <li><a href="#" class="d-block p-1 text-light"><i class="icon mr-2 ion-md-timer"></i> Administración
+                        Unidades</a></li>
+                <li><a href="#" class="d-block p-1 text-light"><i class="icon mr-2 ion-md-timer"></i> Administración
+                        Unidades</a></li>
+                <li><a href="#" class="d-block p-1 text-light"><i class="icon mr-2 ion-md-timer"></i> Administración
+                        Unidades</a></li>
+                <li><a href="#" class="d-block p-1 text-light"><i class="icon mr-2 ion-md-timer"></i> Administración
+                        Unidades</a></li>
+                <li><a href="#" class="d-block p-1 text-light"><i class="icon mr-2 ion-md-timer"></i> Administración
+                        Unidades</a></li>
+                <li><a href="#" class="d-block p-1 text-light"><i class="icon mr-2 ion-md-timer"></i> Administración
+                        Unidades</a></li>
+                <li><a href="#" class="d-block p-1 text-light"><i class="icon mr-2 ion-md-timer"></i> Administración
+                        Unidades</a></li>
+                <li><a href="#" class="d-block p-1 text-light"><i class="icon mr-2 ion-md-timer"></i> Administración
+                        Unidades</a></li>
+                <li><a href="#" class="d-block p-1 text-light"><i class="icon mr-2 ion-md-timer"></i> Administración
+                        Unidades</a></li>
+                <li><a href="#" class="d-block p-1 text-light"><i class="icon mr-2 ion-md-timer"></i> Administración
+                        Unidades</a></li>
+                <li><a href="#" class="d-block p-1 text-light"><i class="icon mr-2 ion-md-timer"></i> Administración
+                        Unidades</a></li>
+                <li><a href="#" class="d-block p-1 text-light"><i class="icon mr-2 ion-md-timer"></i> Administración
+                        Unidades</a></li>
+                <li><a href="#" class="d-block p-1 text-light"><i class="icon mr-2 ion-md-timer"></i> Administración
+                        Unidades</a></li>
+                <li><a href="#" class="d-block p-1 text-light"><i class="icon mr-2 ion-md-timer"></i> Administración
+                        Unidades</a></li>
+                <li><a href="#" class="d-block p-1 text-light"><i class="icon mr-2 ion-md-timer"></i> Administración
+                        Unidades</a></li>
+                <li><a href="#" class="d-block p-1 text-light"><i class="icon mr-2 ion-md-calendar"></i> Amenidades</a>
+                </li>
+                <li><a href="#" class="d-block p-1 text-light"><i class="icon mr-2 ion-md-person"></i> Control de
+                        invitados</a></li>
+                <li><a href="#" class="d-block p-1 text-light"><i class="icon mr-2 ion-md-stopwatch"></i>Histórico</a>
+                </li>
+            </ul>
+
+            <ul class="list-unstyled components ul-configuracion">
+                <li><a href="#" class="d-block p-1 text-light"><i class="icon mr-2 ion-md-settings"></i>
+                        Configuración</a></li>
+            </ul>
+        </nav>
+
+        <div class="overlay"></div>
+
+        <!-- Page Content  -->
+        <div id="content">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn-info">
+                        <i class="fas fa-greater-than"></i>
+                    </button>
+                    <h2 class="title-header">{{ title }}</h2>
+
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item campanita">
+                                <div class="red-point"></div>
+
+                                <i class="icon ion-md-notifications"></i>
+                            </li>
+                            <li class="dropdown">
+                                <button onclick="myFunction()" class="dropbtn">
+                                    <img src="{% static 'images/mifoto.jpg' %}" class="mifoto" alt="foto"> Haus <i
+                                        class="fa fa-caret-down"></i>
+                                </button>
+                                <div id="myDropdown" class="dropdown-content">
+                                    <a href="#"><i class="fas fa-user-alt"></i> Perfil</a>
+                                    <a href="#"><i class="fas fa-user-cog"></i> Ajustes</a>
+                                    <a href="#"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            {% block content %}
+
+            {% endblock %}
+
+        </div>
+
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+
+    <!-- jQuery Custom Scroller CDN -->
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js">
+    </script>
+
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>
