@@ -1,4 +1,4 @@
-$(document).ready(function () {
+/* $(document).ready(function () {
   $("#sidebar").mCustomScrollbar({
       theme: "minimal"
   });
@@ -15,6 +15,14 @@ $(document).ready(function () {
       $('a[aria-expanded=true]').attr('aria-expanded', 'false');
   });
 });
+ */
+
+$(document).ready(function () {
+  $('#sidebarCollapse').on('click', function () {
+      $('#sidebar').toggleClass('active');
+  });
+});
+
 
 /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
@@ -56,75 +64,3 @@ responsive: [{
 
 var chart = new ApexCharts(document.querySelector("#chart"), options);
 chart.render();
-
-/* Highcharts.setOptions({
-  colors: ['#01BAF2', '#71BF45', '#FAA74B']
-});  
-Highcharts.chart('graficas', {
-  chart: {
-    plotBackgroundColor: null,
-    plotBorderWidth: null,
-    plotShadow: false,
-    type: 'pie'
-  }, */
-  /* title: {
-    text: 'Air Composition',
-    y:225
-  }, */
-/* legend:{
-  enabled:false
-},
-  tooltip: {
-    pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-  },
-  plotOptions: {
-    pie: {
-      allowPointSelect: true,
-      cursor: 'pointer',
-      dataLabels: {
-        enabled: true,
-        formatter:function(){ */
-          // return this.key+ ': ' + this.y + '%';
-         /*  return this.key+ ': ' + this.y;
-        }
-      },
-      showInLegend: true
-    }
-  },
-  series: [{
-    name: 'Total Servicios',
-    colorByPoint: true,
-      innerSize: '60%',
-    data: [{
-      name: 'Sin servicio',
-     color: '#fdebd0 ',
-      y: 6,
-    }, {
-      name: 'En curso',
-     color: ' #1b4f72',
-      y: 14 
-    }, {
-      name: 'Otros',
-      color: '#f2f4f4',
-      y: 15
-    }]
-  }]
-}); */
-
-
-//exporte les données sélectionnées
-/* var $table = $('#table');
-    $(function () {
-        $('#toolbar').find('select').change(function () {
-            $table.bootstrapTable('refreshOptions', {
-                exportDataType: $(this).val()
-            });
-        });
-    })
-
-		var trBoldBlue = $("table");
-
-	$(trBoldBlue).on("click", "tr", function (){
-			$(this).toggleClass("bold-blue");
-	}); */
-

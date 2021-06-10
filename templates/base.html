@@ -32,83 +32,90 @@
 <body>
 
     <div class="wrapper">
-        <!-- Sidebar  -->
-        <nav id="sidebar">
-            <div id="dismiss">
-                <i class="fas fa-arrow-left"></i>
-            </div>
+  
 
-            <div class="sidebar-header">
-                <img class="logo" src="{% static 'images/logo.png' %}" alt="logo">
-                <h3>Haus</h3>
-            </div>
-
-            <ul class="list-unstyled components">
-                <li class="{% if request.path == index %} active {% endif %}">
-                    {# <a href="{% url 'condominios' %}" class="d-block p-1 text-light"><i class="icon mr-2 ion-md-home"></i> Home</a> #}
-                    <a href="{{ index }}" class="d-block p-1 text-light"><i class="icon mr-2 ion-md-home"></i> Home</a>
-                </li>
-                <li class="{% if request.path == mantenimiento %} active {% endif %}"><a href="{{ mantenimiento }}" class="d-block p-1 text-light"><i class="icon mr-2 ion-md-cube"></i> Mantenimiento</a></li>
-                <li><a href="#" class="d-block p-1 text-light"><i class="icon mr-2 ion-md-person"></i> Administración personal</a></li>
-                <li><a href="#" class="d-block p-1 text-light"><i class="icon mr-2 ion-md-calendar"></i> Contabilidad</a></li>
-                <li><a href="#" class="d-block p-1 text-light"><i class="icon mr-2 ion-md-text"></i> Avisos <span class="badge badge-light">5</span></a></li>
-                <li><a href="#" class="d-block p-1 text-light"><i class="icon mr-2 ion-md-timer"></i> Administración Unidades</a></li>
-                <li><a href="#" class="d-block p-1 text-light"><i class="icon mr-2 ion-md-calendar"></i> Amenidades</a></li>
-                <li><a href="#" class="d-block p-1 text-light"><i class="icon mr-2 ion-md-person"></i> Control de invitados</a></li>
-                <li><a href="#" class="d-block p-1 text-light"><i class="icon mr-2 ion-md-stopwatch"></i>Histórico</a></li>
-            </ul>
-            <!--  </li>
-            </ul> -->
-            <ul class="list-unstyled components ul-configuracion">
-                <li><a href="#" class="d-block p-1 text-light"><i class="icon mr-2 ion-md-settings"></i> Configuración</a></li>
-            </ul>
-        </nav>
-
-        <!-- Page Content  -->
-        <div id="content">
-
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <div class="container-fluid">
-
-                    <button type="button" id="sidebarCollapse" class="btn-info">
-                        <i class="fas fa-greater-than"></i>
-                        <!-- <i class="fas fa-less-than"></i> -->
-                    </button>
-                    <h2 class="title-header">{{ title }}</h2>
-
-                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <i class="fas fa-align-justify"></i>
-                    </button>
-
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="nav navbar-nav ml-auto">
-                            <li class="nav-item campanita">
-                                <div class="red-point"></div>
-                                <!-- <a class="nav-link" href="#">Page</a> -->
-                                <i class="icon ion-md-notifications"></i>
-                            </li>
-                            <li class="dropdown">
-                                <button onclick="myFunction()" class="dropbtn">
-                                    <img src="{% static 'images/mifoto.jpg' %}" class="mifoto" alt="foto">  Haus <i class="fa fa-caret-down"></i>
-                                </button>
-                                <div id="myDropdown" class="dropdown-content">
-                                  <a href="#"><i class="fas fa-user-alt"></i> Perfil</a>
-                                  <a href="#"><i class="fas fa-user-cog"></i> Ajustes</a>
-                                  <a href="#"><i class="fas fa-sign-out-alt"></i> Logout</a>
-                                </div>
-                            </li> 
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-            
-            {% block content %}
-            
-            {% endblock %}
-            
-        </div>
         
-        <div class="overlay"></div>
+            <!-- Sidebar  -->
+            <nav id="sidebar">
+                <!-- <div id="dismiss">
+                    <i class="fas fa-arrow-left"></i>
+                </div>
+
+                <div class="sidebar-header">
+                    <img class="logo" src="{% static 'images/logo.png' %}" alt="logo">
+                    <h3>Haus</h3>
+                </div> -->
+                <div class="sidebar-header">
+                    <h3>Haus</h3>
+                    <strong>Hs</strong>
+                </div>
+
+                <ul class="list-unstyled components">
+                    <li class="{% if request.path == index %} active {% endif %}">
+                        {# <a href="{% url 'condominios' %}" class="d-block p-1 text-light"><i class="icon mr-2 ion-md-home"></i> Home</a> #}
+                        <a href="{{ index }}" class="d-block p-1 text-light"><i class="icon mr-2 ion-md-home"></i> Home</a>
+                    </li>
+                    <li class="{% if request.path == mantenimiento %} active {% endif %}"><a href="{{ mantenimiento }}" class="d-block p-1 text-light"><i class="icon mr-2 ion-md-cube"></i> Mantenimiento</a></li>
+                    <li><a href="#" class="d-block p-1 text-light"><i class="icon mr-2 ion-md-person"></i> Administración personal</a></li>
+                    <li><a href="#" class="d-block p-1 text-light"><i class="icon mr-2 ion-md-calendar"></i> Contabilidad</a></li>
+                    <li><a href="#" class="d-block p-1 text-light"><i class="icon mr-2 ion-md-text"></i> Avisos <span class="badge badge-light">5</span></a></li>
+                    <li><a href="#" class="d-block p-1 text-light"><i class="icon mr-2 ion-md-timer"></i> Administración Unidades</a></li>
+                    <li><a href="#" class="d-block p-1 text-light"><i class="icon mr-2 ion-md-calendar"></i> Amenidades</a></li>
+                    <li><a href="#" class="d-block p-1 text-light"><i class="icon mr-2 ion-md-person"></i> Control de invitados</a></li>
+                    <li><a href="#" class="d-block p-1 text-light"><i class="icon mr-2 ion-md-stopwatch"></i>Histórico</a></li>
+                </ul>
+                <!--  </li>
+                </ul> -->
+                <ul class="list-unstyled components ul-configuracion">
+                    <li><a href="#" class="d-block p-1 text-light"><i class="icon mr-2 ion-md-settings"></i> Configuración</a></li>
+                </ul>
+            </nav>
+
+            <!-- Page Content  -->
+            <div id="content">
+
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <div class="container-fluid">
+
+                        <button type="button" id="sidebarCollapse" class="btn-info">
+                            <i class="fas fa-greater-than"></i>
+                        </button>
+                        <h2 class="title-header">{{ title }}</h2>
+
+                        <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <i class="fas fa-align-justify"></i>
+                        </button>
+
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="nav navbar-nav ml-auto">
+                                <li class="nav-item campanita">
+                                    <div class="red-point"></div>
+                                    <!-- <a class="nav-link" href="#">Page</a> -->
+                                    <i class="icon ion-md-notifications"></i>
+                                </li>
+                                <li class="dropdown">
+                                    <button onclick="myFunction()" class="dropbtn">
+                                        <img src="{% static 'images/mifoto.jpg' %}" class="mifoto" alt="foto">  Haus <i class="fa fa-caret-down"></i>
+                                    </button>
+                                    <div id="myDropdown" class="dropdown-content">
+                                    <a href="#"><i class="fas fa-user-alt"></i> Perfil</a>
+                                    <a href="#"><i class="fas fa-user-cog"></i> Ajustes</a>
+                                    <a href="#"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                                    </div>
+                                </li> 
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                
+                {% block content %}
+                
+                {% endblock %}
+                
+            </div>
+
+
+            <!-- <div class="overlay"></div> -->
     </div>
 
     <!-- Optional JavaScript -->
@@ -121,11 +128,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
     
     <script src="{% static 'js/main.js' %}"></script>
-
-    <script src="https://code.highcharts.com/highcharts.js"></script>
-    <script src="https://code.highcharts.com/modules/exporting.js"></script>
-    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
-        <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js" integrity="sha256-R4pqcOYV8lt7snxMQO/HSbVCFRPMdrhAFMH+vr9giYI=" crossorigin="anonymous"></script> -->
-
 </body>
 </html>
