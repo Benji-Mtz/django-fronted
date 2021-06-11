@@ -12,6 +12,7 @@ $(document).ready(function () {
     $("#sidebar").toggleClass("active");
     $("#content").toggleClass("active");
     $(".overlay").addClass("active");
+    $("button.btn-information").toggleClass("active");
     $(".collapse.in").toggleClass("in");
     $("a[aria-expanded=true]").attr("aria-expanded", "false");
   });

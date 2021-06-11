@@ -138,14 +138,14 @@
    }
 
    #sidebar {
-      width: 250px;
+      width: 220px;
       position: fixed;
       top: 0;
       left: -250px;
       height: 100vh;
       z-index: 999;
-      background: #7386d5;
-      color: #fff;
+      background: var(--primary) !important;
+      color: var(--light) !important;
       transition: all 0.3s;
       overflow-y: scroll;
       box-shadow: 3px 3px 3px rgb(0 0 0 / 20%);

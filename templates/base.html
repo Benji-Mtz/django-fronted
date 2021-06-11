@@ -17,7 +17,6 @@
     <!-- Our Custom CSS -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" href="{% static 'css/sidebar.css' %}">
-    {# <link rel="stylesheet" href="{% static 'css/argon.css' %}"> #}
 
     <!-- Scrollbar Custom CSS -->
     <link rel="stylesheet"
@@ -156,13 +155,18 @@
         <!-- Page Content  -->
         <div id="content">
 
+        <button type="button" id="sidebarCollapse" class="btn-information">
+                <!-- <i class="fas fa-greater-than"></i> -->
+                <i class="fas fa-chevron-left"></i>
+        </button>
+        
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
 
-                    <button type="button" id="sidebarCollapse" class="btn-info">
+                    <!-- <button type="button" id="sidebarCollapse" class="btn-info">
                         <i class="fas fa-greater-than"></i>
-                    </button>
-                    <h2 class="title-header">{{ title }}</h2>
+                    </button> -->
+                    <!-- <h2 class="title-header">{{ title }}</h2> -->
 
                     <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse"
                         data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
