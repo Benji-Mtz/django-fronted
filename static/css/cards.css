@@ -1,0 +1,11 @@
+button.agregar {
+    background: var(--secondary);
+    border-radius: 6px;
+    
+    font-family: Montserrat !important;
+    font-size: 16px;
+    color: var(--light);
+    letter-spacing: 0;
+    text-align: center;
+}
+
