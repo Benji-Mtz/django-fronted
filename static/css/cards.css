@@ -1,11 +1,72 @@
-button.agregar {
-    background: var(--secondary);
-    border-radius: 6px;
-    
-    font-family: Montserrat !important;
-    font-size: 16px;
-    color: var(--light);
-    letter-spacing: 0;
-    text-align: center;
+/*Estilos Generales*/
+.button {
+    display: inline-block;
+	background:var(--primary);
+	color: var(--light);
+	font-size:1.5rem;
+    font-weight: lighter;
+	margin:5px;
+	padding:5px 0;
+	text-align:center;
+	width: 20rem;
+	text-decoration:none;
+    transition: 0.1s ease all;
 }
+.agregar {
+    display: flex;
+    justify-content: space-around;
+}
+.button.agregar:hover {
+    color: var(--light);
+    opacity: 0.9;
+}
+/* Cards */
+.card-new {
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    /* width: 25rem; */
 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+.card-new:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}  
+.card-new img {
+      display: inline-block;
+      border-radius: 50%;
+      width: 60%;
+      margin: 3rem auto;
+}
+.container-card {
+    text-align: center;
+    padding: .5rem 1rem;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+}
+.position-button{
+    position: relative;
+}
+.button-card {
+    position: absolute;
+    bottom: -10px;
+    border-radius: 2rem;
+    display: inline-block;
+	background:var(--primary);
+	color: var(--light);
+	font-size:1.5rem;
+    font-weight: lighter;
+	/* margin:15px; */
+	padding:1rem 0;
+	text-align:center;
+	width: 20rem;
+	text-decoration:none;
+    transition: 0.1s ease all;
+}
+.button-card:hover {
+    color: var(--light);
+    opacity: 0.9;
+}
