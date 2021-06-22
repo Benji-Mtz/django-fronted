@@ -1,0 +1,262 @@
+/* ---------------------------------------------------
+MANTENIMIENTO
+----------------------------------------------------- */
+.wrapper-grid {
+    height: 56rem;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-auto-flow: column;
+  
+    background-color: var(--light);
+    color: var(--negro);
+  }
+  
+  .box {
+    /* background: aquamarine; */
+    color: var(--negro);
+    border-radius: 5px;
+    border: 1px solid #dee2e6;
+    padding: 2rem;
+  }
+  
+  .servicios {
+    grid-column: 1 / 4;
+    grid-row: 1 / 2;
+  
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+  .title-services {
+    grid-column: 1 / 5;
+    grid-row: 1 / 2;
+  }
+  .inner-box {
+    border: 1px solid var(--grey);
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .servicios > div:nth-of-type(1) {
+    grid-column: 1 / 2;
+    grid-row: 2 / 4;
+  }
+  .servicios > div:nth-of-type(2) {
+    grid-column: 2 / 3;
+    grid-row: 2 / 4;
+  }
+  .servicios > div:nth-of-type(3) {
+    grid-column: 3 / 4;
+    grid-row: 2 / 4;
+  }
+  .servicios > div:nth-of-type(4) {
+    grid-column: 4 / 5;
+    grid-row: 2 / 4;
+  }
+  .servicios > div:nth-of-type(5) {
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+  }
+  .servicios > div:nth-of-type(6) {
+    grid-column: 2 / 3;
+    grid-row: 4 / 5;
+  }
+  .servicios > div:nth-of-type(7) {
+    grid-column: 3 / 4;
+    grid-row: 4 / 5;
+  }
+  .servicios > div:nth-of-type(8) {
+    grid-column: 4 / 5;
+    grid-row: 4 / 5;
+  }
+  .img-row-1 {
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background: url("https://postgradoindustrial.com/wp-content/uploads/master-en-carpinteria.jpg");
+    background-size: cover;
+    position: relative;
+  }
+  .layer-row-1 {
+    /* background-color: rgba(0, 0, 0, 0.2); */
+    background-image: linear-gradient(
+      rgba(255, 255, 255, 0.3),
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.7)
+    );
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  h5.service-row-1 {
+    color: var(--light);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-left: 1rem;
+  }
+  .img-row-2 {
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background: url("https://www.liderempresarial.com/wp-content/uploads/2020/08/lab.jpeg");
+    background-size: cover;
+    position: relative;
+  }
+  .layer-row-2 {
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  h4.service-row-2 {
+    color: var(--light);
+    position: absolute;
+    bottom: 25%;
+    left: 30%;
+  }
+  .total-servicios {
+    grid-column: 4 / 5;
+    grid-row: 1 / 2;
+  }
+  .servicios-curso {
+    grid-column: 1 / 4;
+    grid-row: 2 / 3;
+  }
+  .personal {
+    grid-column: 4 / 5;
+    grid-row: 2 / 3;
+  }
+  
+  #chart {
+    max-width: 650px;
+    margin: 35px auto;
+  }
+  .personal {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .personal img {
+    width: 45%;
+  }
+  
+  span.en-curso::before {
+    /* Añadimos contenido antes de cada elemento de la lista */
+    content: "\2022"; /* Insertamos el marcador */
+    padding-right: 8px; /* Establecemos el espacio entre las viñetas y el list item */
+    color: greenyellow; /* Coloreamos la viñeta */
+  
+    display: inline-block;
+    padding-right: 10px;
+    font-size: 30px;
+    line-height: 15px;
+    vertical-align: -5px;
+    width: 15px;
+  }
+  
+  span.detenido::before {
+    content: "\2022";
+    padding-right: 8px;
+    color: red;
+    display: inline-block;
+    padding-right: 10px;
+    font-size: 30px;
+    line-height: 15px;
+    vertical-align: -5px;
+    width: 15px;
+  }
+  /* ---------------------------------------------------
+      MEDIAQUERIES MANTENIMIENTO MEDIUM
+  ----------------------------------------------------- */
+  @media (max-width: 991px) {
+  
+    button.btn-information {
+      left: 25px;
+    }
+  
+    .wrapper-grid {
+      /* height: 56rem;
+      display: grid;
+      grid-gap: 10px; */
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      /* grid-auto-flow: column; */
+  
+      grid-template-areas:
+        "servicios servicios servicios servicios"
+        "curso curso curso curso"
+        "total total personal personal"
+      }
+  
+    .servicios {
+      grid-area: servicios;
+    }
+  
+    h4.service-row-2 {
+      bottom: 1px;
+      left: 2px;
+    }
+  
+    .total-servicios {
+      grid-area: total;
+    }
+    .servicios-curso {
+      grid-area: curso;
+    }
+    .personal {
+      grid-area: personal;
+    }
+  
+  }
+  
+  /* ---------------------------------------------------
+      MEDIAQUERIES MANTENIMIENTO LITTLE
+  ----------------------------------------------------- */
+  @media (max-width: 768px) {
+  
+    button.btn-information {
+      left: 25px;
+    }
+  
+    .wrapper-grid {
+      /* height: 56rem;
+      display: grid;
+      grid-gap: 10px; */
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+      /* grid-auto-flow: column; */
+  
+      grid-template-areas:
+        "servicios servicios servicios servicios"
+        "curso curso curso curso"
+        "total total total total"
+        "personal personal personal personal"
+      }
+  
+    .servicios {
+      grid-area: servicios;
+    }
+  
+    h4.service-row-2 {
+      bottom: 1px;
+      left: 2px;
+    }
+  
+    .total-servicios {
+      grid-area: total;
+    }
+    .servicios-curso {
+      grid-area: curso;
+    }
+    .personal {
+      grid-area: personal;
+    }
+    
+  }
+  

@@ -1,4 +1,3 @@
-/*Estilos Generales*/
 .button {
     display: inline-block;
 	background:var(--primary);
@@ -69,4 +68,42 @@
 .button-card:hover {
     color: var(--light);
     opacity: 0.9;
+}
+
+.grid-home {
+    padding: 0 3rem;
+    height: 30rem;
+    display: grid;
+    grid-gap: 3rem;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-flow: column;
+}
+
+@media (max-width: 991px) {
+  
+    .grid-home {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      /* grid-auto-flow: column; */
+  
+      /* grid-template-areas:
+        "servicios servicios servicios servicios"
+        "curso curso curso curso"
+        "total total personal personal"
+      */
+    } 
+}
+  
+  /* ---------------------------------------------------
+      MEDIAQUERIES MANTENIMIENTO LITTLE
+  ----------------------------------------------------- */
+@media (max-width: 768px) {
+
+    .grid-home {
+    
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        /* grid-auto-flow: column; */
+
+        }
 }

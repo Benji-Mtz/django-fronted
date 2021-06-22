@@ -15,9 +15,12 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <!-- Our Custom CSS -->
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/configuracion.css' %}">
+    <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
     <link rel="stylesheet" href="{% static 'css/sidebar.css' %}">
-    <link rel="stylesheet" href="{% static 'css/cards.css' %}">
+    <link rel="stylesheet" href="{% static 'css/mantenimiento.css' %}">
+    <link rel="stylesheet" href="{% static 'css/cards-home.css' %}">
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
 
     <!-- Scrollbar Custom CSS -->
     <link rel="stylesheet"
@@ -40,6 +43,8 @@
 
 <body>
 
+{% if title != 'Login' %}
+        
     <div class="wrapper">
 
 
@@ -205,6 +210,12 @@
         </div>
 
     </div>
+
+    {% elif title == 'Login' %}
+        {% block login %}
+
+        {% endblock %}
+    {% endif %}
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

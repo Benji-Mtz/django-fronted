@@ -1,0 +1,172 @@
+/* ---------------------------------------------------
+  NAVBAR
+----------------------------------------------------- */
+
+button.btn-information.active {
+
+    transform: rotate(-180deg);
+  }
+  
+  button.btn-information {
+    width: 1rem;
+    height: 1rem;
+    background: var(--arena);
+    color: var(--negro);
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    padding: 20px;
+    font-size: 2rem;
+  
+    position: absolute;
+    top: 30px;
+    left: -25px;
+  
+    border: 5px solid #fff !important;
+    border-color: #fff !important;
+    z-index: 10;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease all;
+  }
+  
+  button.btn-information:hover {
+    background: var(--negro);
+    color: var(--arena);
+    /* box-shadow: 3px 3px 50px rgba(0, 0, 0, 0.15); */
+    border-color: #fff;
+  }
+  
+  #dismiss {
+    border: 2px solid var(--carne);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    cursor: pointer;
+  }
+  .logo {
+    max-width: 7rem;
+    border-radius: 1rem;
+  }
+  .mifoto {
+    max-width: 35px;
+    border-radius: 50%;
+  }
+  .ul-configuracion {
+    padding-top: 30rem;
+  }
+  
+  .title-header {
+    margin: 0 1rem;
+  }
+  
+  .navbar {
+    padding: 15px 10px;
+    background: var(--light) !important;
+    border: none;
+    border-radius: 0;
+    /* margin-bottom: 20px; */
+    margin-bottom: 2rem;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar-btn {
+    box-shadow: none;
+    outline: none !important;
+    border: none;
+  }
+  
+  .navbar-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  
+  @media (max-width: 991px) {
+    .navbar-nav {
+      margin: 2rem auto;
+      display: flex;
+      flex-direction: row;
+  
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .campanita {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border: 1px solid rgb(197, 191, 191);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15%;
+    cursor: pointer;
+    margin: 0 15px;
+    color: var(--negro) !important;
+  }
+  .campanita i {
+    color: var(--negro) !important;
+    font-size: 2.5rem;
+  }
+  .campanita .red-point {
+    border-radius: 50%;
+    background-color: red;
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  
+  /* Dropdown Button */
+  .dropbtn {
+    color: var(--negro);
+    padding: 1px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    background: var(--light);
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 120px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  
+  /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+  .show {
+    display: block;
+  }
+  
+  span.badge {
+    margin-left: 11rem;
+  }
