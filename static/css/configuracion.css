@@ -10,7 +10,8 @@
   --negro: #000;
   --parrafos: #999;
 
-  --fuentePrincipal: "Poppins", sans-serif;
+  --fuentePrincipal: 'Montserrat', sans-serif;
+  /* --fuentePrincipal: "Poppins", sans-serif; */
 }
 
 html {
@@ -26,7 +27,7 @@ html {
   box-sizing: inherit;
 }
 
-@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+/* @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700"; */
 
 body {
   font-family: var(--fuentePrincipal);

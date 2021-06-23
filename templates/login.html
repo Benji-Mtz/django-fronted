@@ -1,21 +1,40 @@
-{% extends 'base.html' %}
 {% load static %}
-{% block login %}
-
-<div class="login-container">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Fuente -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet"> 
+     <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+     <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <title>{{ title }}</title>
+</head>
+<body>
+    <div class="login-container">
       
-    <div class="div-izquierdo">
-    </div>
-    <div class="div-derecho">
-        <h1>haus</h1>
-        <h5>LIVING MANAGEMENT</h5>
+        <div class="div-izquierdo">
+        </div>
 
-        
-        <input type="text" name="usuario" id="usuario" placeholder="Email o Usuario">
-        <input type="password" name="password" >
-        
-        <button  class="btn button" type="submit">Entrar</button>
-    </div>
+        <div class="div-derecho">
+            <h1>haus</h1>
+            <h5>LIVING MANAGEMENT</h5>
+    
+            <form>
+                <div class="form-group">
+                    <input type="text" name="usuario" id="usuario" class="form-control" placeholder="Email o Usuario">
+                </div>
+                <div class="form-group">
+                    <input type="password" name="password" class="form-control" placeholder="Password">
+                </div>
+                    <button  class="button" type="submit">Entrar</button>
+              </form>
 
-</div>
-{% endblock %}
+        </div>
+    
+    </div>    
+</body>
+</html>
