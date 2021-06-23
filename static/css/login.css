@@ -113,3 +113,134 @@ input[type=password]:focus {
         grid-area: formulario;
     }
 }
+:root {
+    --arena: #f9e4b7;
+    --primary: #3e0384;
+    --secondary: #7B4FFF;
+    --light: #ffffff;
+    --grey-light: #fafafa;
+    --grey: #efefef;
+    --grey-line: #ddd;
+    --carne: #fda79f;
+    --negro: #000;
+    --parrafos: #999;
+  
+    --fuentePrincipal: 'Montserrat', sans-serif;
+    /* --fuentePrincipal: "Poppins", sans-serif; */
+  }
+  
+  html {
+    box-sizing: border-box;
+  
+    /* rem = 10px */
+    font-size: 62.5%;
+  }
+  
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+
+.login-container {
+    background: var(--primary) !important;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-flow: column;
+}
+
+.div-izquierdo {
+    
+    background-image: url('/static/images/edificio-h.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.div-derecho {
+    height: 100vh;
+    color: var(--light) !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+form {
+    margin-top: 5rem;
+    text-align: center;
+}
+.div-derecho h1 {
+    font-size: 5rem;
+    margin: 0;
+}
+
+.div-derecho h5 {
+    font-size: 1rem;
+}
+input[type=text],
+input[type=password] {
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+     border-radius: 20px;
+     border: 1px solid #979797;
+     color: var(--primary) !important;
+     width: 250px;
+     height: 30px;
+     padding-left: 10px;
+     font-weight: bold;
+     margin-bottom: 1.8rem;
+    }
+    
+input[type=text]:focus,
+input[type=password]:focus {
+     outline: none;
+     border: 1px solid #979797;
+     color: var(--primary) !important;
+}
+
+.div-derecho .button {
+    display: inline-block;
+	background:#40e0d0;
+	color: var(--light);
+	font-size:1.2rem;
+    border: none;
+    border-radius: 2rem;
+	margin: auto;
+	padding: 5px;
+	text-align:center;
+	width: 15rem;
+	text-decoration:none;
+    transition: 0.1s ease all;
+}
+.negritas {
+    font-weight: bold;
+    text-decoration: none;
+}
+.lijeras{
+    font-weight: 100;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+a:hover{
+    text-decoration: none;
+    color: #fff;
+}
+
+
+@media (max-width: 768px) {
+
+    .login-container {
+        grid-template-columns: repeat(1, 1fr);
+        grid-auto-flow: column;
+        grid-template-areas: "formulario"
+    }
+
+    .div-derecho {
+        grid-area: formulario;
+    }
+}
